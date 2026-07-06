@@ -60,6 +60,8 @@
   .b-whole { background: var(--green-soft); color: var(--green); }
   .b-room { background: var(--red-soft); color: var(--red); }
   .b-type { background: #eef0f4; color: var(--muted); }
+  .b-ask { background: var(--gold-soft); color: #8a6d1a; }
+  .section-note { color: var(--muted); font-size: 0.92rem; margin-bottom: 10px; }
   .price-row { display: flex; gap: 22px; flex-wrap: wrap; margin: 8px 0 4px; }
   .price-row .big { font-size: 1.3rem; font-weight: 800; }
   .price-row .pp { font-size: 0.95rem; color: var(--muted); align-self: flex-end; }
@@ -105,6 +107,12 @@
     <ul id="actfast-list"></ul>
   </div>
 
+  <div class="note" id="scenario-a"></div>
+
+  <h2 class="section">Worth a Call About a 4-Month Term</h2>
+  <p class="section-note">These are not confirmed Scenario A listings. Genuine whole-group 4-month leases are essentially not on the market yet (see the note above). These are the strongest Scenario B options where a private or small landlord might realistically agree to shorten the lease to September through December 2026 if asked directly.</p>
+  <div id="askabout"></div>
+
   <h2 class="section">Top Picks</h2>
   <div id="top"></div>
 
@@ -113,8 +121,6 @@
 
   <h2 class="section">Per-Room Fallbacks (individual leases, group could fill the whole house)</h2>
   <div id="fallback"></div>
-
-  <div class="note" id="scenario-a"></div>
 
   <h2 class="section">Source Coverage Appendix</h2>
   <table id="coverage"><thead><tr><th style="width:38%">Source</th><th>Result</th></tr></thead><tbody></tbody></table>
@@ -145,6 +151,9 @@ function card(l) {
   const leaseBadge = l.wholeLease
     ? '<span class="badge b-whole">One lease, whole property</span>'
     : '<span class="badge b-room">Per-room leases</span>';
+  const askBadge = l.askAboutShortTerm
+    ? '<span class="badge b-ask">Worth asking about 4-month term</span>'
+    : '';
   const priceHtml = total
     ? '<span class="big">' + money(total) + '/mo' + estTag + '</span>' +
       '<span class="pp"><b>' + money(pp) + '</b> per person at ' + occ + '</span>'
@@ -157,6 +166,7 @@ function card(l) {
     '<div class="badges">' +
       '<span class="badge b-scenario">Scenario ' + l.scenario + '</span>' +
       leaseBadge +
+      askBadge +
       '<span class="badge b-type">' + l.type + '</span>' +
       '<span class="badge b-type">' + l.beds + ' bed / ' + l.baths + ' bath</span>' +
       (l.furnished === true ? '<span class="badge b-type">Furnished</span>' : '') +
@@ -187,6 +197,9 @@ function render() {
     document.getElementById(t).innerHTML = tiers[t].map(card).join("") ||
       '<p style="color:var(--muted)">Nothing in this tier right now.</p>';
   }
+  const askAbout = DATA.listings.filter(l => l.askAboutShortTerm).sort((a, b) => a.rank - b.rank);
+  document.getElementById("askabout").innerHTML = askAbout.map(card).join("") ||
+    '<p style="color:var(--muted)">None flagged right now.</p>';
   document.getElementById("count").textContent = DATA.listings.length + " qualifying listings";
   document.getElementById("actfast-list").innerHTML = DATA.actFast.map(a => "<li>" + a + "</li>").join("");
   document.getElementById("scenario-a").innerHTML = "<b>Scenario A (4-month) status:</b> " + DATA.scenarioANote;
