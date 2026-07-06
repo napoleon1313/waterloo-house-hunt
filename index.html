@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waterloo House Hunt, Fall 2026</title>
+<style>
+  :root {
+    --ink: #1c2333;
+    --muted: #5b6478;
+    --bg: #f4f5f8;
+    --card: #ffffff;
+    --gold: #e4b429;
+    --gold-soft: #fdf3d7;
+    --green: #1e7d4f;
+    --green-soft: #e3f2ea;
+    --red: #b3372f;
+    --red-soft: #fbe9e7;
+    --blue: #2b5aa7;
+    --blue-soft: #e8eff9;
+    --line: #e3e6ec;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.55;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { padding: 28px 0 18px; border-bottom: 3px solid var(--gold); margin-bottom: 20px; }
+  header h1 { font-size: 1.7rem; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); margin-top: 6px; font-size: 0.95rem; }
+  .updated { display: inline-block; background: var(--gold-soft); border: 1px solid var(--gold);
+    border-radius: 999px; padding: 2px 12px; font-size: 0.85rem; margin-top: 10px; font-weight: 600; }
+  .controls { display: flex; align-items: center; gap: 10px; margin: 18px 0 6px; flex-wrap: wrap; }
+  .controls span { font-size: 0.9rem; color: var(--muted); }
+  .controls button {
+    border: 1px solid var(--line); background: var(--card); border-radius: 8px;
+    padding: 6px 16px; font-size: 0.95rem; font-weight: 600; cursor: pointer; color: var(--ink);
+  }
+  .controls button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .banner { background: var(--red-soft); border: 1px solid #eac6c2; border-left: 5px solid var(--red);
+    border-radius: 10px; padding: 14px 16px; margin: 18px 0; }
+  .banner h2 { font-size: 1rem; color: var(--red); margin-bottom: 6px; }
+  .banner li { margin-left: 18px; font-size: 0.92rem; margin-top: 4px; }
+  h2.section { font-size: 1.25rem; margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; margin-bottom: 14px; box-shadow: 0 1px 2px rgba(20,25,40,0.05);
+  }
+  .card .top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .rank { background: var(--ink); color: #fff; border-radius: 8px; padding: 1px 9px;
+    font-weight: 700; font-size: 0.95rem; }
+  .card h3 { font-size: 1.12rem; }
+  .card h3 a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); }
+  .card h3 a:hover { background: var(--gold-soft); }
+  .hood { color: var(--muted); font-size: 0.88rem; }
+  .badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+  .badge { font-size: 0.78rem; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+  .b-scenario { background: var(--blue-soft); color: var(--blue); }
+  .b-whole { background: var(--green-soft); color: var(--green); }
+  .b-room { background: var(--red-soft); color: var(--red); }
+  .b-type { background: #eef0f4; color: var(--muted); }
+  .price-row { display: flex; gap: 22px; flex-wrap: wrap; margin: 8px 0 4px; }
+  .price-row .big { font-size: 1.3rem; font-weight: 800; }
+  .price-row .pp { font-size: 0.95rem; color: var(--muted); align-self: flex-end; }
+  .price-row .pp b { color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 4px 18px; margin: 8px 0; font-size: 0.9rem; }
+  .grid .k { color: var(--muted); }
+  .proscons { font-size: 0.92rem; margin-top: 8px; }
+  .proscons .p::before { content: "+ "; color: var(--green); font-weight: 800; }
+  .proscons .c::before { content: "− "; color: var(--red); font-weight: 800; }
+  .flag { background: var(--red-soft); color: var(--red); border-radius: 8px;
+    padding: 6px 10px; font-size: 0.87rem; margin-top: 8px; }
+  .note { background: var(--blue-soft); border: 1px solid #cddcf2; border-left: 5px solid var(--blue);
+    border-radius: 10px; padding: 14px 16px; margin: 18px 0; font-size: 0.94rem; }
+  table { width: 100%; border-collapse: collapse; background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #eef0f4; font-size: 0.85rem; }
+  tr:last-child td { border-bottom: none; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 14px; }
+  #error { display: none; background: var(--red-soft); border-radius: 10px; padding: 16px; margin: 20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Waterloo House Hunt, Fall 2026</h1>
+    <div class="sub">Group rental search for 5 to 6 UW co-op students. Scenario A: 4-month lease Sept to Dec 2026. Scenario B: 12-month lease Sept 2026 to Aug 2027. Budget $3,500 to $6,500 total, ideal $4,000 to $5,000. Commute limit 20 minutes to UW main campus.</div>
+    <div class="updated" id="updated"></div>
+  </header>
+
+  <div id="error">Could not load listings.json. If you opened this file directly from disk, use the hosted site URL instead.</div>
+
+  <div class="controls">
+    <span>Split rent between:</span>
+    <button id="occ5" class="active" onclick="setOcc(5)">5 people</button>
+    <button id="occ6" onclick="setOcc(6)">6 people</button>
+    <span id="count"></span>
+  </div>
+
+  <div class="banner" id="actfast">
+    <h2>Act fast</h2>
+    <ul id="actfast-list"></ul>
+  </div>
+
+  <h2 class="section">Top Picks</h2>
+  <div id="top"></div>
+
+  <h2 class="section">Honourable Mentions</h2>
+  <div id="honourable"></div>
+
+  <h2 class="section">Per-Room Fallbacks (individual leases, group could fill the whole house)</h2>
+  <div id="fallback"></div>
+
+  <div class="note" id="scenario-a"></div>
+
+  <h2 class="section">Source Coverage Appendix</h2>
+  <table id="coverage"><thead><tr><th style="width:38%">Source</th><th>Result</th></tr></thead><tbody></tbody></table>
+
+  <footer>
+    Commute times marked (est.) are estimated from the address and typical traffic, verify the exact address in Google Maps before signing anything.
+    Prices and availability change quickly. Never send a deposit before an in-person or live video viewing, and get the lease type (whole-house vs per-room) in writing.
+    This page is refreshed automatically once a day.
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+let occ = 5;
+
+function money(n) { return "$" + n.toLocaleString("en-CA"); }
+
+function totalOf(l) {
+  if (l.totalRent) return l.totalRent;
+  if (l.perRoomRent && l.beds) return l.perRoomRent * l.beds;
+  return null;
+}
+
+function card(l) {
+  const total = totalOf(l);
+  const estTag = (!l.totalRent && total) ? " (est. from per-room rate)" : "";
+  const pp = total ? Math.round(total / occ) : null;
+  const leaseBadge = l.wholeLease
+    ? '<span class="badge b-whole">One lease, whole property</span>'
+    : '<span class="badge b-room">Per-room leases</span>';
+  const priceHtml = total
+    ? '<span class="big">' + money(total) + '/mo' + estTag + '</span>' +
+      '<span class="pp"><b>' + money(pp) + '</b> per person at ' + occ + '</span>'
+    : '<span class="big">Contact for price</span>';
+  const flags = (l.flags || []).map(f => '<div class="flag">Flag: ' + f + '</div>').join("");
+  return '<div class="card">' +
+    '<div class="top"><span class="rank">#' + l.rank + '</span>' +
+    '<h3><a href="' + l.url + '" target="_blank" rel="noopener">' + l.address + '</a></h3>' +
+    '<span class="hood">' + l.neighbourhood + '</span></div>' +
+    '<div class="badges">' +
+      '<span class="badge b-scenario">Scenario ' + l.scenario + '</span>' +
+      leaseBadge +
+      '<span class="badge b-type">' + l.type + '</span>' +
+      '<span class="badge b-type">' + l.beds + ' bed / ' + l.baths + ' bath</span>' +
+      (l.furnished === true ? '<span class="badge b-type">Furnished</span>' : '') +
+    '</div>' +
+    '<div class="price-row">' + priceHtml + '</div>' +
+    '<div class="grid">' +
+      '<div><span class="k">Drive to UW:</span> ' + l.commuteDrive + '</div>' +
+      '<div><span class="k">Transit:</span> ' + l.commuteTransit + '</div>' +
+      '<div><span class="k">Lease:</span> ' + l.leaseTerm + '</div>' +
+      '<div><span class="k">Parking:</span> ' + l.parking + '</div>' +
+      '<div><span class="k">Utilities:</span> ' + l.utilities + '</div>' +
+      '<div><span class="k">Listed:</span> ' + l.listed + ' via ' + l.source + '</div>' +
+    '</div>' +
+    '<div class="proscons"><div class="p">' + l.pros + '</div><div class="c">' + l.cons + '</div></div>' +
+    flags +
+  '</div>';
+}
+
+function render() {
+  if (!DATA) return;
+  document.getElementById("updated").textContent = "Last updated: " + DATA.lastUpdated;
+  document.getElementById("occ5").className = occ === 5 ? "active" : "";
+  document.getElementById("occ6").className = occ === 6 ? "active" : "";
+  const tiers = { top: [], honourable: [], fallback: [] };
+  DATA.listings.forEach(l => (tiers[l.tier] || tiers.honourable).push(l));
+  for (const t of ["top", "honourable", "fallback"]) {
+    tiers[t].sort((a, b) => a.rank - b.rank);
+    document.getElementById(t).innerHTML = tiers[t].map(card).join("") ||
+      '<p style="color:var(--muted)">Nothing in this tier right now.</p>';
+  }
+  document.getElementById("count").textContent = DATA.listings.length + " qualifying listings";
+  document.getElementById("actfast-list").innerHTML = DATA.actFast.map(a => "<li>" + a + "</li>").join("");
+  document.getElementById("scenario-a").innerHTML = "<b>Scenario A (4-month) status:</b> " + DATA.scenarioANote;
+  document.querySelector("#coverage tbody").innerHTML =
+    DATA.sourceCoverage.map(s => "<tr><td>" + s.source + "</td><td>" + s.result + "</td></tr>").join("");
+}
+
+function setOcc(n) { occ = n; render(); }
+
+fetch("listings.json?t=" + Date.now())
+  .then(r => r.json())
+  .then(d => { DATA = d; render(); })
+  .catch(() => { document.getElementById("error").style.display = "block"; });
+</script>
+</body>
+</html>
