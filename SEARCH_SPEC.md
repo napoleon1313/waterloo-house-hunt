@@ -3,18 +3,18 @@
 This is the canonical search spec. The daily update task re-runs this search and refreshes `listings.json`. Do not edit `index.html` for data changes; it renders whatever is in `listings.json`.
 
 ## Objective
-Rental search for a group of 5 to 6 University of Waterloo co-op students leasing a property together in Waterloo, Ontario. Search broadly across the rental ecosystem, verify listing quality and legitimacy, rank results.
+Rental search for University of Waterloo co-op students leasing a property together in Waterloo, Ontario. The site covers 3, 4, 5, and 6 bedroom options side by side (filterable on the site) since the group size under consideration has varied. Search broadly across the rental ecosystem, verify listing quality and legitimacy, rank results.
 
 ## Lease scenarios (tag every result A, B, or Both)
-- Scenario A: 4-month lease, September to December 2026, for 5 to 6 people.
-- Scenario B: 12-month lease (September 2026 to August 2027), for 4 to 6 people.
+- Scenario A: 4-month lease, September to December 2026.
+- Scenario B: 12-month lease (September 2026 to August 2027).
 
 ## Non-negotiable requirements
 - Commute to UW main campus: 20 minutes or less. Report both driving (weekday ~8:30 a.m.) and GRT/ION transit where available. Mark estimates as (est.).
 - House strongly preferred; townhouse or apartment as fallback if it scores well.
-- One lease for the whole property preferred. Flag individual-lease-only listings as fallback tier, never top picks.
-- 5 to 6 bedrooms, or 4 bedrooms plus den/flex. At least 2 bathrooms.
-- Total rent $3,500 to $6,500 CAD; ideal $4,000 to $5,000. Report total and per-person at 5 and 6 occupants.
+- One lease for the whole property preferred. Flag individual-lease-only or partial-floor-only listings as fallback tier (or exclude if a duplicate of an already-screened partial-lease address), never top picks.
+- Bedroom pools to maintain, each targeting roughly 15 verified listings: 3 bedroom, 4 bedroom, 5 bedroom, 6 bedroom (1+ bathroom minimum for 3-bed, 2+ preferred for 4-bed and up). Don't force the count; report the real total honestly if a pool falls short (as of 2026-07-07: 14 three-bed, 15 four-bed, 15 five-bed, 6-bed pool still thin at 1).
+- Budget scales with bedroom count; don't apply the original 5-6 person $3,500-$6,500 band to smaller units. Report total rent and per-bedroom rent for every listing (the site computes per-bedroom automatically).
 
 ## Sources to check every pass (log accessibility in sourceCoverage)
 - KeyHomes (keyhomes.ca, MLS aggregator; the strongest fetchable source, try the general Waterloo feed and bedroom-filtered listing pages plus property detail pages)
@@ -36,11 +36,11 @@ As of the 2026-07-05 deep dive, genuine whole-group 4-month (Sept-Dec) leases ar
 
 ## Ranking weights (heaviest first)
 1. Commute (under 10 min best, 10 to 20 qualifies)
-2. Price fit to $4,000 to $5,000 band
-3. House over apartment
-4. Bed/bath fit for 5 to 6
-5. Single whole-group lease over per-room
-6. Quality signals, no red flags
+2. Price fit (ideal $4,000-$5,000 total for 5-6 bed; for smaller units judge per-bedroom rent against comparable listings in the same pool instead)
+3. House over apartment or condo
+4. Bed/bath fit for the bedroom count (fewer bathrooms than bedrooms is a real minus, flag it)
+5. Single whole-group lease over per-room or partial-floor
+6. Quality signals, no red flags (unusually high maintenance fees, bathroom counts that look implausible for the unit size, or partial-floor leases pitched as full houses should be flagged prominently, not silently smoothed over)
 
 ## Data fields per listing (keep schema identical to existing entries)
 rank, tier (top/honourable/fallback), address, neighbourhood, totalRent, perRoomRent, beds, baths, type, leaseTerm, scenario, wholeLease, commuteDrive, commuteTransit, parking, utilities, furnished, source, url, listed, pros, cons, flags (array), askAboutShortTerm (boolean, see Scenario A reality check above).

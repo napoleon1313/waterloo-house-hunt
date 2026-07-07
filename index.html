@@ -89,7 +89,7 @@
 <div class="wrap">
   <header>
     <h1>Waterloo House Hunt, Fall 2026</h1>
-    <div class="sub">Group rental search for 5 to 6 UW co-op students. Scenario A: 4-month lease Sept to Dec 2026. Scenario B: 12-month lease Sept 2026 to Aug 2027. Budget $3,500 to $6,500 total, ideal $4,000 to $5,000. Commute limit 20 minutes to UW main campus.</div>
+    <div class="sub">Group rental search for UW co-op students, covering 3, 4, 5, and 6 bedroom options for groups of different sizes. Scenario A: 4-month lease Sept to Dec 2026. Scenario B: 12-month lease Sept 2026 to Aug 2027. Budget scales with bedroom count; the 5-6 bed search targeted $3,500 to $6,500 total, ideal $4,000 to $5,000. Commute limit 20 minutes to UW main campus. Use the bedroom filter below to narrow the list.</div>
     <div class="updated" id="updated"></div>
   </header>
 
@@ -99,6 +99,15 @@
     <span>Split rent between:</span>
     <button id="occ5" class="active" onclick="setOcc(5)">5 people</button>
     <button id="occ6" onclick="setOcc(6)">6 people</button>
+  </div>
+
+  <div class="controls">
+    <span>Filter by bedrooms:</span>
+    <button id="bedAll" class="active" onclick="setBedFilter(null)">All</button>
+    <button id="bed3" onclick="setBedFilter(3)">3 bed</button>
+    <button id="bed4" onclick="setBedFilter(4)">4 bed</button>
+    <button id="bed5" onclick="setBedFilter(5)">5 bed</button>
+    <button id="bed6" onclick="setBedFilter(6)">6 bed</button>
     <span id="count"></span>
   </div>
 
@@ -135,6 +144,7 @@
 <script>
 let DATA = null;
 let occ = 5;
+let bedFilter = null;
 
 function money(n) { return "$" + n.toLocaleString("en-CA"); }
 
@@ -179,6 +189,7 @@ function card(l) {
       '<div><span class="k">Parking:</span> ' + l.parking + '</div>' +
       '<div><span class="k">Utilities:</span> ' + l.utilities + '</div>' +
       '<div><span class="k">Listed:</span> ' + l.listed + ' via ' + l.source + '</div>' +
+      (total ? '<div><span class="k">Per bedroom:</span> ' + money(Math.round(total / l.beds)) + '</div>' : '') +
     '</div>' +
     '<div class="proscons"><div class="p">' + l.pros + '</div><div class="c">' + l.cons + '</div></div>' +
     flags +
@@ -190,17 +201,21 @@ function render() {
   document.getElementById("updated").textContent = "Last updated: " + DATA.lastUpdated;
   document.getElementById("occ5").className = occ === 5 ? "active" : "";
   document.getElementById("occ6").className = occ === 6 ? "active" : "";
+  for (const b of [null, 3, 4, 5, 6]) {
+    document.getElementById(b === null ? "bedAll" : "bed" + b).className = bedFilter === b ? "active" : "";
+  }
+  const visible = bedFilter === null ? DATA.listings : DATA.listings.filter(l => l.beds === bedFilter);
   const tiers = { top: [], honourable: [], fallback: [] };
-  DATA.listings.forEach(l => (tiers[l.tier] || tiers.honourable).push(l));
+  visible.forEach(l => (tiers[l.tier] || tiers.honourable).push(l));
   for (const t of ["top", "honourable", "fallback"]) {
     tiers[t].sort((a, b) => a.rank - b.rank);
     document.getElementById(t).innerHTML = tiers[t].map(card).join("") ||
-      '<p style="color:var(--muted)">Nothing in this tier right now.</p>';
+      '<p style="color:var(--muted)">Nothing in this tier for the current bedroom filter.</p>';
   }
-  const askAbout = DATA.listings.filter(l => l.askAboutShortTerm).sort((a, b) => a.rank - b.rank);
+  const askAbout = visible.filter(l => l.askAboutShortTerm).sort((a, b) => a.rank - b.rank);
   document.getElementById("askabout").innerHTML = askAbout.map(card).join("") ||
-    '<p style="color:var(--muted)">None flagged right now.</p>';
-  document.getElementById("count").textContent = DATA.listings.length + " qualifying listings";
+    '<p style="color:var(--muted)">None flagged for the current bedroom filter.</p>';
+  document.getElementById("count").textContent = visible.length + " of " + DATA.listings.length + " qualifying listings shown";
   document.getElementById("actfast-list").innerHTML = DATA.actFast.map(a => "<li>" + a + "</li>").join("");
   document.getElementById("scenario-a").innerHTML = "<b>Scenario A (4-month) status:</b> " + DATA.scenarioANote;
   document.querySelector("#coverage tbody").innerHTML =
@@ -208,6 +223,7 @@ function render() {
 }
 
 function setOcc(n) { occ = n; render(); }
+function setBedFilter(n) { bedFilter = n; render(); }
 
 fetch("listings.json?t=" + Date.now())
   .then(r => r.json())
