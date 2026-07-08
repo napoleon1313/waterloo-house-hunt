@@ -22,8 +22,11 @@ function card(l, occ) {
     : '<span class="big">Contact for price</span>';
   const flags = (l.flags || []).map(f => '<div class="flag">Flag: ' + f + '</div>').join("");
   return '<div class="card">' +
+    '<div class="titlebar"><span class="closebox"></span>' +
+      '<span class="tb-label"><a href="' + l.url + '" target="_blank" rel="noopener">' + l.address + '</a></span>' +
+    '</div>' +
+    '<div class="card-body">' +
     '<div class="top"><span class="rank">#' + l.rank + '</span>' +
-    '<h3><a href="' + l.url + '" target="_blank" rel="noopener">' + l.address + '</a></h3>' +
     '<span class="hood">' + l.neighbourhood + '</span></div>' +
     '<div class="badges">' +
       '<span class="badge b-scenario">Scenario ' + l.scenario + '</span>' +
@@ -45,10 +48,23 @@ function card(l, occ) {
     '</div>' +
     '<div class="proscons"><div class="p">' + l.pros + '</div><div class="c">' + l.cons + '</div></div>' +
     flags +
+    '</div>' +
   '</div>';
 }
 
 function cardList(listings, occ) {
   return listings.map(l => card(l, occ)).join("") ||
     '<p style="color:var(--muted)">Nothing here.</p>';
+}
+
+function menubarClock() {
+  const el = document.getElementById("menuclock");
+  if (!el) return;
+  const tick = () => {
+    const d = new Date();
+    el.textContent = d.toLocaleDateString("en-CA") + " " +
+      d.toLocaleTimeString("en-CA", { hour: "2-digit", minute: "2-digit" });
+  };
+  tick();
+  setInterval(tick, 30000);
 }

@@ -3,28 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weekly Archive — Waterloo House Hunt</title>
+<meta name="theme-color" content="#000000">
+<title>WEEKLY ARCHIVE // Waterloo House Hunt OS</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Weekly Archive</h1>
-    <div class="sub">Every week's results, frozen in place the moment they were archived. Nothing here is ever edited or re-ranked after the fact, even when the current site changes.</div>
-    <div class="nav"><a href="index.html">&larr; Back to the current listings</a></div>
-  </header>
-
-  <div id="error">Could not load archive/index.json. If you opened this file directly from disk, use the hosted site URL instead.</div>
-
-  <div class="archive-banner">
-    These snapshots are historical. Prices, availability, and even links may be out of date, that is the point, it is a record of what the site showed at the time. For anything you plan to act on, use the <a href="index.html">current listings</a> instead.
+<div class="crt">
+  <div class="menubar">
+    <span class="apple">&#8962;</span>
+    <span class="item"><b>HouseHunt</b></span>
+    <a href="index.html">Current</a>
+    <a href="history.html">Archive</a>
+    <a href="https://github.com/napoleon1313/waterloo-house-hunt" target="_blank" rel="noopener">Source</a>
+    <span class="spacer"></span>
+    <span class="clock" id="menuclock"></span>
   </div>
 
-  <div id="weeks"></div>
+  <div class="wrap">
+    <header>
+      <div class="titlebar"><span class="closebox"></span><span class="tb-label">ARCHIVE_READ_ONLY.SYS</span></div>
+      <div class="header-inner">
+        <h1>Weekly Archive</h1>
+        <div class="sub">Every week's results, frozen in place the moment they were archived. Nothing here is ever edited or re-ranked after the fact, even when the current site changes.</div>
+        <div class="nav"><a href="index.html">&lt;&lt; BACK TO CURRENT LISTINGS</a></div>
+      </div>
+    </header>
 
-  <footer>
-    Each week is written once and never modified. A new snapshot is added automatically at the start of each week by the same daily process that keeps the current listings fresh.
-  </footer>
+    <div id="error">Could not load archive/index.json. If you opened this file directly from disk, use the hosted site URL instead.</div>
+
+    <div class="archive-banner">
+      These snapshots are historical. Prices, availability, and even links may be out of date, that is the point, it is a record of what the site showed at the time. For anything you plan to act on, use the <a href="index.html">current listings</a> instead.
+    </div>
+
+    <div id="weeks"></div>
+
+    <footer>
+      SYSTEM NOTES: Each week is written once and never modified. A new snapshot is added automatically at the start of each week by the same daily process that keeps the current listings fresh.
+    </footer>
+  </div>
 </div>
 
 <script src="site.js"></script>
@@ -42,11 +58,14 @@ async function loadWeek(file) {
 
 function renderWeekBlock(w, topListings) {
   return '<div class="week-block" data-file="' + w.file + '">' +
+    '<div class="titlebar"><span class="closebox"></span><span class="tb-label">' + w.isoWeek + '.JSON [LOCKED]</span></div>' +
+    '<div class="week-inner">' +
     '<div class="week-head"><h2>' + w.weekLabel + '<span class="frozen-tag">Archived, never edited</span></h2>' +
     '<span class="week-meta">' + w.dateRange + ' &middot; archived ' + w.archivedAt + ' &middot; ' + w.listingCount + ' listings total</span></div>' +
     '<div class="top-cards">' + cardList(topListings, 5) + '</div>' +
     '<button class="expand-btn" type="button">Show all ' + w.listingCount + ' listings from this week</button>' +
     '<div class="week-extra"></div>' +
+    '</div>' +
   '</div>';
 }
 
@@ -60,7 +79,7 @@ async function render() {
   }
   const container = document.getElementById("weeks");
   container.innerHTML = blocks.join("") ||
-    '<p style="color:var(--muted)">No archived weeks yet. Check back after the first weekly snapshot.</p>';
+    '<p class="section-note">No archived weeks yet. Check back after the first weekly snapshot.</p>';
 
   container.querySelectorAll(".expand-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -83,6 +102,8 @@ async function render() {
     });
   });
 }
+
+menubarClock();
 
 fetch("archive/index.json?t=" + Date.now())
   .then(r => r.json())
