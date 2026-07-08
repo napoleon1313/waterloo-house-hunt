@@ -1,6 +1,6 @@
 # Waterloo Group House Search Spec (Fall 2026)
 
-This is the canonical search spec. The daily update task re-runs this search and refreshes `listings.json`. Do not edit `index.html` for data changes; it renders whatever is in `listings.json`.
+This is the canonical search spec. The daily update task re-runs this search and refreshes `listings.json`. Do not edit `index.html` for data changes; it renders whatever is in `listings.json`. The site has two pages: `index.html` (live, current listings) and `history.html` (read-only weekly archive, see the Weekly Archive section below). `style.css` and `site.js` are shared by both pages, only touch them for site-wide styling or the `card()`/`cardList()` rendering logic, never for weekly data.
 
 ## Objective
 Rental search for University of Waterloo co-op students leasing a property together in Waterloo, Ontario. The site covers 3, 4, 5, and 6 bedroom options side by side (filterable on the site) since the group size under consideration has varied. Search broadly across the rental ecosystem, verify listing quality and legitimacy, rank results.
@@ -45,13 +45,26 @@ As of the 2026-07-05 deep dive, genuine whole-group 4-month (Sept-Dec) leases ar
 ## Data fields per listing (keep schema identical to existing entries)
 rank, tier (top/honourable/fallback), address, neighbourhood, totalRent, perRoomRent, beds, baths, type, leaseTerm, scenario, wholeLease, commuteDrive, commuteTransit, parking, utilities, furnished, source, url, listed, pros, cons, flags (array), askAboutShortTerm (boolean, see Scenario A reality check above).
 
+## Weekly archive (immutable, do not skip this step)
+The `archive/` directory holds one frozen snapshot of `listings.json` per ISO week, plus `archive/index.json` which lists them. This is a historical record, not a cache: once a week is archived, that file must never be edited, overwritten, or deleted again, by this task or any other. Do not "fix" an old week's data even if you later realize something in it was wrong; the record is supposed to reflect what the site actually showed at the time.
+
+Every run of the daily task:
+1. Compute the current ISO week (`date +%G-W%V`, e.g. `2026-W28`).
+2. Check `archive/index.json` for an entry with that `isoWeek`. If one already exists, do nothing further here, the week is already archived and must stay untouched.
+3. If no entry exists for the current ISO week, this is the first run of a new week: after completing today's normal listings.json refresh (steps 1-4 below), create a new archive snapshot:
+   - Compute the Monday of the current ISO week for the label (`date -v-$(($(date +%u)-1))d +%Y-%m-%d` on macOS, or `date -d "monday this week" +%Y-%m-%d` on Linux).
+   - Write `archive/<isoWeek>.json`: the full current `listings.json` object (same structure, all fields) with two fields added at the top: `weekLabel` (e.g. `"Week of July 13, 2026"`) and `isoWeek`, plus `archivedAt` (today's date).
+   - Prepend a new entry to the `weeks` array in `archive/index.json` (most recent first) with: `weekLabel`, `isoWeek`, `dateRange` (e.g. `"Jul 13 - Jul 19, 2026"`), `archivedAt`, `file` (just the filename, e.g. `"2026-W29.json"`), `listingCount`, `tierCounts` ({top, honourable, fallback} counts), and `topPick` (address, totalRent, beds, baths, commuteDrive, url of the rank-1 listing).
+   - Validate both archive files parse as JSON before committing.
+
 ## Daily update procedure
 1. Re-check every listing currently in `listings.json`: still live? price changed? If gone, remove it and note in UPDATE_LOG.md. Never remove a listing just to make room for a new one; only remove confirmed-dead ones.
 2. Sweep the sources above for new qualifying listings, including Scenario A sublet searches; verify detail pages before adding. Don't force the total count; only add genuinely verified listings.
 3. Recompute ranks and tiers after changes. Update `lastUpdated` (YYYY-MM-DD), `actFast`, `scenarioANote`, `askAboutShortTerm` flags, and `sourceCoverage`.
 4. Keep JSON structure identical to the existing file. Validate JSON before committing (ranks contiguous 1..N, tiers and askAboutShortTerm counts sane).
-5. Append a dated 2-4 line entry to UPDATE_LOG.md (added/removed/price changes/nothing new).
-6. Commit and push to main; GitHub Pages serves the update automatically.
+5. Run the Weekly archive step above.
+6. Append a dated 2-4 line entry to UPDATE_LOG.md (added/removed/price changes/nothing new, plus a note if a new week was archived).
+7. Commit and push to main; GitHub Pages serves the update automatically.
 
 ## Style
 Canadian English, no em dashes, no emojis. Newsletter tone, concise.

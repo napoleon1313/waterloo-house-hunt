@@ -1,0 +1,25 @@
+{
+  "weeks": [
+    {
+      "weekLabel": "Week of July 6, 2026",
+      "isoWeek": "2026-W28",
+      "dateRange": "Jul 6 - Jul 12, 2026",
+      "archivedAt": "2026-07-07",
+      "file": "2026-W28.json",
+      "listingCount": 47,
+      "tierCounts": {
+        "top": 16,
+        "honourable": 20,
+        "fallback": 11
+      },
+      "topPick": {
+        "address": "110 Peppler St, Waterloo",
+        "totalRent": 3750,
+        "beds": 5,
+        "baths": 2,
+        "commuteDrive": "7 min (est.)",
+        "url": "https://www.keyhomes.ca/property/ontario/waterloo/29917851"
+      }
+    }
+  ]
+}
