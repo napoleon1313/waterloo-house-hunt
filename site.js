@@ -21,10 +21,26 @@ function card(l, occ) {
       (pp ? '<span class="pp"><b>' + money(pp) + '</b> per person at ' + occ + '</span>' : '')
     : '<span class="big">Contact for price</span>';
   const flags = (l.flags || []).map(f => '<div class="flag">Flag: ' + f + '</div>').join("");
+  let photosHtml = "";
+  if (Array.isArray(l.photos)) {
+    if (l.photos.length) {
+      const tiles = l.photos.slice(0, 4).map(p =>
+        '<a href="' + l.url + '" target="_blank" rel="noopener">' +
+        '<img src="' + p + '" alt="Photo of ' + l.address + '" loading="lazy" ' +
+        'onerror="this.parentNode.classList.add(\'photo-empty\');this.parentNode.textContent=\'NO SIGNAL\';">' +
+        '</a>').join("");
+      const pads = Math.max(0, 4 - l.photos.length);
+      const padTiles = '<span class="photo-empty">NO PHOTO</span>'.repeat(pads);
+      photosHtml = '<div class="photos">' + tiles + padTiles + '</div>';
+    } else {
+      photosHtml = '<div class="photos">' + '<span class="photo-empty">NO PHOTO</span>'.repeat(4) + '</div>';
+    }
+  }
   return '<div class="card">' +
     '<div class="titlebar"><span class="closebox"></span>' +
       '<span class="tb-label"><a href="' + l.url + '" target="_blank" rel="noopener">' + l.address + '</a></span>' +
     '</div>' +
+    photosHtml +
     '<div class="card-body">' +
     '<div class="top"><span class="rank">#' + l.rank + '</span>' +
     '<span class="hood">' + l.neighbourhood + '</span></div>' +

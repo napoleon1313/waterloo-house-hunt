@@ -43,7 +43,13 @@ As of the 2026-07-05 deep dive, genuine whole-group 4-month (Sept-Dec) leases ar
 6. Quality signals, no red flags (unusually high maintenance fees, bathroom counts that look implausible for the unit size, or partial-floor leases pitched as full houses should be flagged prominently, not silently smoothed over)
 
 ## Data fields per listing (keep schema identical to existing entries)
-rank, tier (top/honourable/fallback), address, neighbourhood, totalRent, perRoomRent, beds, baths, type, leaseTerm, scenario, wholeLease, commuteDrive, commuteTransit, parking, utilities, furnished, source, url, listed, pros, cons, flags (array), askAboutShortTerm (boolean, see Scenario A reality check above).
+rank, tier (top/honourable/fallback), address, neighbourhood, totalRent, perRoomRent, beds, baths, type, leaseTerm, scenario, wholeLease, commuteDrive, commuteTransit, parking, utilities, furnished, source, url, listed, pros, cons, flags (array), askAboutShortTerm (boolean, see Scenario A reality check above), photos (array of 0-4 direct image URLs).
+
+## Photos policy
+- Photos are HOTLINKED from the original listing sites, never downloaded into this repo. Listing photos belong to the brokerages and landlords; this site only references them and credits the source in the footer. Do not commit image files.
+- Extraction per source: KeyHomes exposes numbered gallery images matching `keyhomes.ca/img/..._N.webp` (take _1 to _4); Kijiji pages embed `media.kijiji.ca/api/v1/.../images/<hash>` URLs in their JSON (append `?rule=kijijica-640-webp`, verified to serve webp); UWrent uses WordPress uploads (skip `-WxH.jpg` thumbnail variants). Zumper category pages and RentWoch/Liv.rent homepage-style URLs have no per-listing gallery, leave photos [] and the site renders NO PHOTO tiles.
+- When adding a new listing, extract up to 4 photo URLs from its detail page with the patterns above (plain HTTP fetch with a browser User-Agent works; keep 1-3 s between KeyHomes requests, they rate-limit bursts). When re-verifying an existing listing, if its page still loads, refresh its photos array too; the front end shows NO SIGNAL tiles when a hotlinked image has died.
+- Archived weeks in archive/ predate or freeze whatever photos existed at snapshot time; never backfill photos into an already-archived week.
 
 ## Weekly archive (immutable, do not skip this step)
 The `archive/` directory holds one frozen snapshot of `listings.json` per ISO week, plus `archive/index.json` which lists them. This is a historical record, not a cache: once a week is archived, that file must never be edited, overwritten, or deleted again, by this task or any other. Do not "fix" an old week's data even if you later realize something in it was wrong; the record is supposed to reflect what the site actually showed at the time.

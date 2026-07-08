@@ -26,7 +26,13 @@
       "pros": "Walking distance to both universities, full bath on each level, finished basement",
       "cons": "1,115 sq ft is cozy for six, utilities extra",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/110-peppler-street-waterloo-ontario-n2j-3c8_29917851_1.webp",
+        "https://www.keyhomes.ca/img/110-peppler-street-waterloo-ontario-n2j-3c8_29917851_2.webp",
+        "https://www.keyhomes.ca/img/110-peppler-street-waterloo-ontario-n2j-3c8_29917851_3.webp",
+        "https://www.keyhomes.ca/img/110-peppler-street-waterloo-ontario-n2j-3c8_29917851_4.webp"
+      ]
     },
     {
       "rank": 2,
@@ -51,8 +57,15 @@
       "listed": "31 days ago",
       "pros": "Cheapest whole house found, $600 per person at five occupants, walk to Laurier",
       "cons": "950 sq ft, available now so a September hold needs negotiating",
-      "flags": ["Confirm the landlord will accept a September 2026 start"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm the landlord will accept a September 2026 start"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://www.keyhomes.ca/img/105-marshall-street-waterloo-ontario-n2j-2t5_29850865_1.webp",
+        "https://www.keyhomes.ca/img/105-marshall-street-waterloo-ontario-n2j-2t5_29850865_2.webp",
+        "https://www.keyhomes.ca/img/105-marshall-street-waterloo-ontario-n2j-2t5_29850865_3.webp"
+      ]
     },
     {
       "rank": 3,
@@ -77,8 +90,16 @@
       "listed": "Advertised for September 2026",
       "pros": "Same landlord as 342 Albert St, one of the tightest commutes on the whole list, furnished, snow and yard care included",
       "cons": "Rent not posted online, call 519-729-9300 or email sam@uwrent.com",
-      "flags": ["Confirm a single group lease in writing, this landlord also rents by the room"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm a single group lease in writing, this landlord also rents by the room"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://uwrent.com/wp-content/uploads/01-113-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/02-113-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/03-113-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/04-113-University-Ave-W.jpg"
+      ]
     },
     {
       "rank": 4,
@@ -103,8 +124,16 @@
       "listed": "Advertised for September 2026",
       "pros": "Adjacent to 113 University Ave W with the same landlord and terms, tight commute, furnished",
       "cons": "Rent not posted online, call 519-729-9300 or email sam@uwrent.com",
-      "flags": ["Confirm a single group lease in writing, this landlord also rents by the room"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm a single group lease in writing, this landlord also rents by the room"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://uwrent.com/wp-content/uploads/01-115-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/02-115-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/03-115-University-Ave-W.jpg",
+        "https://uwrent.com/wp-content/uploads/04-115-University-Ave-W.jpg"
+      ]
     },
     {
       "rank": 5,
@@ -129,8 +158,16 @@
       "listed": "Advertised for September 2026",
       "pros": "Closest drive time to campus, furnished, explicitly available for September 2026, group of five can take the whole house",
       "cons": "Rent not posted, contact sam@uwrent.com or 519-729-9300 for pricing",
-      "flags": ["Also rents by the room, so confirm a single group lease in writing"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Also rents by the room, so confirm a single group lease in writing"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://uwrent.com/wp-content/uploads/01-342-Albert-St-Waterloo.jpg",
+        "https://uwrent.com/wp-content/uploads/02-342-Albert-St-Waterloo.jpg",
+        "https://uwrent.com/wp-content/uploads/03-342-Albert-St-Waterloo.jpg",
+        "https://uwrent.com/wp-content/uploads/04-342-Albert-St-Waterloo.jpg"
+      ]
     },
     {
       "rank": 6,
@@ -155,8 +192,16 @@
       "listed": "Active, tagged NEW",
       "pros": "Four bathrooms for five people, furnished, 2,300 sq ft, finished basement and fenced yard, squarely in the ideal price band",
       "cons": "Landlord withholds the exact street address until contacted, transit runs right at the 20-minute edge",
-      "flags": ["Confirm exact address and re-check commute before applying"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm exact address and re-check commute before applying"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/67/672cb41a-ca40-4d57-935f-b48bd1cc7a4f?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/7a/7af1c86b-afe0-49d5-9f4a-fa463455ae27?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/52/52aa2a45-a7fb-4d69-8513-11ffebd309e1?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/3c/3c518473-d832-4fc9-89a8-6be0ddde1057?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 7,
@@ -182,7 +227,13 @@
       "pros": "Five bathrooms for five or six people, 3,460 sq ft, squarely in the ideal $4,000-5,000 band",
       "cons": "Transit commute runs over 20 minutes, strict application package required",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/757-pasture-rose-street-waterloo-ontario-n2v-0c4_29889657_1.webp",
+        "https://www.keyhomes.ca/img/757-pasture-rose-street-waterloo-ontario-n2v-0c4_29889657_2.webp",
+        "https://www.keyhomes.ca/img/757-pasture-rose-street-waterloo-ontario-n2v-0c4_29889657_3.webp",
+        "https://www.keyhomes.ca/img/757-pasture-rose-street-waterloo-ontario-n2v-0c4_29889657_4.webp"
+      ]
     },
     {
       "rank": 8,
@@ -208,7 +259,13 @@
       "pros": "Fully furnished, in-unit laundry, central air",
       "cons": "Upper unit rather than a full house, August 1 availability means one extra month or negotiation for September",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/134-bridgeport-road-e-unit-upper-waterloo-ontario-n2j-2k4_29934083_1.webp",
+        "https://www.keyhomes.ca/img/134-bridgeport-road-e-unit-upper-waterloo-ontario-n2j-2k4_29934083_2.webp",
+        "https://www.keyhomes.ca/img/134-bridgeport-road-e-unit-upper-waterloo-ontario-n2j-2k4_29934083_3.webp",
+        "https://www.keyhomes.ca/img/134-bridgeport-road-e-unit-upper-waterloo-ontario-n2j-2k4_29934083_4.webp"
+      ]
     },
     {
       "rank": 9,
@@ -234,7 +291,8 @@
       "pros": "$533-640 per person, renovated kitchen, garage, fenced yard, 2,150 sq ft",
       "cons": "Weak transit, the group would want at least one car",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 10,
@@ -259,8 +317,16 @@
       "listed": "1 day ago",
       "pros": "Well under budget at $2,800, five bedrooms (three above grade, two lower level), three bathrooms, in the target Beechwood neighbourhood",
       "cons": "Semi-detached rather than fully detached, listed just 1 day ago so details are thin, confirm exact bedroom layout",
-      "flags": ["Priced well below the group's stated $3,500 floor, worth double-checking condition and why it is so cheap"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Priced well below the group's stated $3,500 floor, worth double-checking condition and why it is so cheap"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/b-630-pinerow-crescent-waterloo-ontario-n2t-2k8_29989448_1.webp",
+        "https://www.keyhomes.ca/img/b-630-pinerow-crescent-waterloo-ontario-n2t-2k8_29989448_2.webp",
+        "https://www.keyhomes.ca/img/b-630-pinerow-crescent-waterloo-ontario-n2t-2k8_29989448_3.webp",
+        "https://www.keyhomes.ca/img/b-630-pinerow-crescent-waterloo-ontario-n2t-2k8_29989448_4.webp"
+      ]
     },
     {
       "rank": 11,
@@ -285,8 +351,16 @@
       "listed": "Active",
       "pros": "About $4,470 total at five rooms, right in the ideal price band, agent-listed so the process should be straightforward",
       "cons": "Ad describes per-room pricing, confirm whether the agent will do one whole-property lease",
-      "flags": ["Lease structure unclear, some listings describe this as 5 to 6 bedrooms, confirm exact count"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Lease structure unclear, some listings describe this as 5 to 6 bedrooms, confirm exact count"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/12/125ec88a-15e4-4fea-9c2f-a7a01ba13094?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/03/03e2bbb9-5144-4a00-922a-e40683ff30d9?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/70/706893e9-40e3-41ac-be41-656fa2e8cfcc?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/96/96e88f61-03c1-4bdc-bc7c-d6f4a3e06dbc?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 12,
@@ -311,8 +385,16 @@
       "listed": "Active",
       "pros": "Explicitly wants a group of 5 to 6, six bedrooms, $550 a room",
       "cons": "$3,300 total is under the group's stated $3,500 floor, exact street location and commute not independently verified this pass",
-      "flags": ["Confirm exact address and commute before applying; listing title says 4 bedroom but the body describes 6, get bedroom count in writing"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm exact address and commute before applying; listing title says 4 bedroom but the body describes 6, get bedroom count in writing"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/c0/c02c9759-fd13-496d-a288-0b121ec77367?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/fb/fb89b334-edb3-4d86-b850-453256ba8904?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/71/71e5f5d6-08d7-49b9-9c76-1f8cfbabc39e?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/31/31518cfd-a3f4-497f-aed3-0045877007ae?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 13,
@@ -337,8 +419,16 @@
       "listed": "Recently updated",
       "pros": "Same excellent location and landlord as 113 and 115 University Ave W, furnished, could fit six with a room to spare",
       "cons": "Seven bedrooms is one more than the group needs, only 2 bathrooms for that many people, rent not posted online",
-      "flags": ["Confirm rent and whether the landlord would rent it to a group of 5-6 at a reduced room count"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm rent and whether the landlord would rent it to a group of 5-6 at a reduced room count"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://uwrent.com/wp-content/uploads/111-University-Ave-West-COVER.jpg",
+        "https://uwrent.com/wp-content/uploads/01-111-University-Ave-West.jpg",
+        "https://uwrent.com/wp-content/uploads/02-111-University-Ave-West.jpg",
+        "https://uwrent.com/wp-content/uploads/03-111-University-Ave-West.jpg"
+      ]
     },
     {
       "rank": 14,
@@ -364,7 +454,8 @@
       "pros": "Good price and location",
       "cons": "Only four bedrooms, works for four or five with a flex arrangement",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 15,
@@ -390,7 +481,8 @@
       "pros": "3.5 bathrooms, newer build",
       "cons": "Four bedrooms only, far west side",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 16,
@@ -415,8 +507,16 @@
       "listed": "Active, tagged NEW",
       "pros": "Garage parking, upgraded kitchen, under budget",
       "cons": "Only four bedrooms with no den mentioned, tight for five or six, landlord withholds exact address until contacted",
-      "flags": ["Confirm bedroom count and exact address before applying"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Confirm bedroom count and exact address before applying"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/1f/1fbc8681-1d7c-4fe8-822a-992e2061d626?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/93/937d5619-ed1d-40fa-a240-5a6658a64412?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/f1/f1928f29-0542-4bda-8544-a58085d29c7b?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/83/8317aed4-63ee-45b9-8533-16548834b3b1?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 17,
@@ -441,8 +541,11 @@
       "listed": "Active",
       "pros": "Rare whole-house layout with private backyard, about $4,750 total",
       "cons": "Per-room leases, May start date listed",
-      "flags": ["Individual-lease-only, treat as fallback"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Individual-lease-only, treat as fallback"
+      ],
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 18,
@@ -467,8 +570,11 @@
       "listed": "Active",
       "pros": "About $3,975 total for a 5-bed suite steps from campus",
       "cons": "Apartment not house, individual leases, purpose-built student building",
-      "flags": ["Individual-lease-only, treat as fallback"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Individual-lease-only, treat as fallback"
+      ],
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 19,
@@ -493,8 +599,16 @@
       "listed": "Recent, virtual tour available",
       "pros": "House right beside campus, roughly $3,400-4,760 total if the group takes every room",
       "cons": "Individual room leases, a group takeover has to be negotiated",
-      "flags": ["Individual-lease-only as posted, treat as fallback"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Individual-lease-only as posted, treat as fallback"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/7f/7f802b97-6059-48e6-88c1-c428188cface?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/82/8232296f-c639-4031-9ff0-4481e290722e?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/02/02288975-bb40-4744-a16a-b9f8d81a113c?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/38/3854440b-03e9-45ac-9cfc-5b6126b719ae?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 20,
@@ -519,8 +633,11 @@
       "listed": "Advertised for September 2026",
       "pros": "About $4,625 total with utilities and internet included, furnished, three bathrooms",
       "cons": "Per-room leases in a managed student rental",
-      "flags": ["Individual-lease-only, treat as fallback"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Individual-lease-only, treat as fallback"
+      ],
+      "askAboutShortTerm": true,
+      "photos": []
     },
     {
       "rank": 21,
@@ -546,7 +663,13 @@
       "pros": "Four full or half bathrooms, 2,300 sq ft, finished basement, fenced yard",
       "cons": "Only four bedrooms, weak transit, at the top of the budget for a smaller house",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/626-wild-rye-street-waterloo-ontario-n2v-0e3_29956784_1.webp",
+        "https://www.keyhomes.ca/img/626-wild-rye-street-waterloo-ontario-n2v-0e3_29956784_2.webp",
+        "https://www.keyhomes.ca/img/626-wild-rye-street-waterloo-ontario-n2v-0e3_29956784_3.webp",
+        "https://www.keyhomes.ca/img/626-wild-rye-street-waterloo-ontario-n2v-0e3_29956784_4.webp"
+      ]
     },
     {
       "rank": 22,
@@ -572,7 +695,8 @@
       "pros": "New construction, four bathrooms, right in the ideal price band",
       "cons": "Only four bedrooms, weak transit",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 23,
@@ -598,7 +722,13 @@
       "pros": "At the floor of the budget range, four bathrooms, transit better than its Vista Hills neighbours per the listing",
       "cons": "Only four bedrooms",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/603-sundew-drive-waterloo-ontario-n2v-0b9_29912396_1.webp",
+        "https://www.keyhomes.ca/img/603-sundew-drive-waterloo-ontario-n2v-0b9_29912396_2.webp",
+        "https://www.keyhomes.ca/img/603-sundew-drive-waterloo-ontario-n2v-0b9_29912396_3.webp",
+        "https://www.keyhomes.ca/img/603-sundew-drive-waterloo-ontario-n2v-0b9_29912396_4.webp"
+      ]
     },
     {
       "rank": 24,
@@ -623,8 +753,16 @@
       "listed": "2 days ago",
       "pros": "Four bathrooms, newly listed",
       "cons": "Only four bedrooms, under budget floor, condo corporation rules may apply, commute is at or past the 20-minute limit with weak transit",
-      "flags": ["Commute likely fails the 20-minute requirement, confirm before considering"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Commute likely fails the 20-minute requirement, confirm before considering"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/271-grey-silo-road-unit-74-waterloo-ontario-n2k-0e9_29986040_1.webp",
+        "https://www.keyhomes.ca/img/271-grey-silo-road-unit-74-waterloo-ontario-n2k-0e9_29986040_2.webp",
+        "https://www.keyhomes.ca/img/271-grey-silo-road-unit-74-waterloo-ontario-n2k-0e9_29986040_3.webp",
+        "https://www.keyhomes.ca/img/271-grey-silo-road-unit-74-waterloo-ontario-n2k-0e9_29986040_4.webp"
+      ]
     },
     {
       "rank": 25,
@@ -649,8 +787,13 @@
       "listed": "141 views",
       "pros": "Good commute, utilities included per one ad, room for the whole group and then some",
       "cons": "Two different ads quote different per-room prices ($700 versus $470 all-inclusive), only three bathrooms for eight rooms",
-      "flags": ["Pricing is inconsistent across postings, get one clear total-rent figure in writing before proceeding, treat as lower priority until clarified"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Pricing is inconsistent across postings, get one clear total-rent figure in writing before proceeding, treat as lower priority until clarified"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/a1/a14f913f-5585-46d4-a97f-746e248f2697?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 26,
@@ -675,8 +818,16 @@
       "listed": "39 days ago",
       "pros": "Good commute, same street as 110 Peppler St",
       "cons": "Only four bedrooms, under budget floor, closer to Laurier than UW, listed over a month with no confirmed recent update",
-      "flags": ["Listed 39 days ago, confirm still available"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Listed 39 days ago, confirm still available"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/91-peppler-street-waterloo-ontario-n2j-3c9_29810767_1.webp",
+        "https://www.keyhomes.ca/img/91-peppler-street-waterloo-ontario-n2j-3c9_29810767_2.webp",
+        "https://www.keyhomes.ca/img/91-peppler-street-waterloo-ontario-n2j-3c9_29810767_3.webp",
+        "https://www.keyhomes.ca/img/91-peppler-street-waterloo-ontario-n2j-3c9_29810767_4.webp"
+      ]
     },
     {
       "rank": 27,
@@ -702,7 +853,13 @@
       "pros": "Best commute in the 3-bedroom pool, walkable to both campuses, furnished, internet included, landlord already offers a flexible academic-year term",
       "cons": "Apartment rather than a house, $1,000 per bedroom is on the higher side for this size",
       "flags": [],
-      "askAboutShortTerm": true
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://www.keyhomes.ca/img/602-246-lester-street-waterloo-ontario-n2l-3w5_29989632_1.webp",
+        "https://www.keyhomes.ca/img/602-246-lester-street-waterloo-ontario-n2l-3w5_29989632_2.webp",
+        "https://www.keyhomes.ca/img/602-246-lester-street-waterloo-ontario-n2l-3w5_29989632_3.webp",
+        "https://www.keyhomes.ca/img/602-246-lester-street-waterloo-ontario-n2l-3w5_29989632_4.webp"
+      ]
     },
     {
       "rank": 28,
@@ -728,7 +885,13 @@
       "pros": "Excellent commute, underground parking, Uptown location",
       "cons": "Apartment rather than a house",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/223-erb-street-w-unit-307-waterloo-ontario-n2l-0b3_29976611_1.webp",
+        "https://www.keyhomes.ca/img/223-erb-street-w-unit-307-waterloo-ontario-n2l-0b3_29976611_2.webp",
+        "https://www.keyhomes.ca/img/223-erb-street-w-unit-307-waterloo-ontario-n2l-0b3_29976611_3.webp",
+        "https://www.keyhomes.ca/img/223-erb-street-w-unit-307-waterloo-ontario-n2l-0b3_29976611_4.webp"
+      ]
     },
     {
       "rank": 29,
@@ -754,7 +917,13 @@
       "pros": "Townhouse rather than an apartment, good commute, 2 parking spaces",
       "cons": "Condo fees may apply on top of rent, confirm with the landlord",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/50-99-roger-street-waterloo-ontario-n2j-0g1_29990037_1.webp",
+        "https://www.keyhomes.ca/img/50-99-roger-street-waterloo-ontario-n2j-0g1_29990037_2.webp",
+        "https://www.keyhomes.ca/img/50-99-roger-street-waterloo-ontario-n2j-0g1_29990037_3.webp",
+        "https://www.keyhomes.ca/img/50-99-roger-street-waterloo-ontario-n2j-0g1_29990037_4.webp"
+      ]
     },
     {
       "rank": 30,
@@ -780,7 +949,13 @@
       "pros": "Very affordable at $800 per bedroom, good commute near the LRT line",
       "cons": "Only 1 parking space for 3 people",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/513-quiet-place-unit-3-waterloo-ontario-n2l-5l6_29984347_1.webp",
+        "https://www.keyhomes.ca/img/513-quiet-place-unit-3-waterloo-ontario-n2l-5l6_29984347_2.webp",
+        "https://www.keyhomes.ca/img/513-quiet-place-unit-3-waterloo-ontario-n2l-5l6_29984347_3.webp",
+        "https://www.keyhomes.ca/img/513-quiet-place-unit-3-waterloo-ontario-n2l-5l6_29984347_4.webp"
+      ]
     },
     {
       "rank": 31,
@@ -806,7 +981,8 @@
       "pros": "Real house rather than a condo, utilities included, good commute in the target Beechwood neighbourhood",
       "cons": "Only 1 bathroom for 3 people, upper-level suite rather than the whole house",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": []
     },
     {
       "rank": 32,
@@ -831,8 +1007,16 @@
       "listed": "Active",
       "pros": "Real house, good commute, four parking spaces",
       "cons": "Available August 1 rather than confirmed September, landlord withholds exact address until contacted",
-      "flags": ["Confirm exact address and September availability before applying"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Confirm exact address and September availability before applying"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/13/1354944f-80ac-4dca-9a55-9b9d7b664e53?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/67/67b20eec-fe52-40c2-a7ff-2935f1bb6a09?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/07/07981482-3c36-4d11-80a3-e1b13938a1ae?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-dealer-ads/images/83/8303836e-5360-4a4e-8c2a-90f1de2aac3d?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 33,
@@ -857,8 +1041,16 @@
       "listed": "3 days ago",
       "pros": "Four bathrooms for three bedrooms, detached double garage, target Beechwood neighbourhood",
       "cons": "Four baths for a 3-bed unit is unusual, worth a sanity check with the landlord before assuming it is correct",
-      "flags": ["Bathroom count looks unusually high for the bedroom count, confirm before relying on it"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Bathroom count looks unusually high for the bedroom count, confirm before relying on it"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/461-columbia-street-w-unit-49-waterloo-ontario-n2t-2p5_29987586_1.webp",
+        "https://www.keyhomes.ca/img/461-columbia-street-w-unit-49-waterloo-ontario-n2t-2p5_29987586_2.webp",
+        "https://www.keyhomes.ca/img/461-columbia-street-w-unit-49-waterloo-ontario-n2t-2p5_29987586_3.webp",
+        "https://www.keyhomes.ca/img/461-columbia-street-w-unit-49-waterloo-ontario-n2t-2p5_29987586_4.webp"
+      ]
     },
     {
       "rank": 34,
@@ -883,8 +1075,16 @@
       "listed": "Same day",
       "pros": "Attached garage, flexible move-in date, water and sewage included",
       "cons": "Four baths for a 3-bed unit is unusual, worth a sanity check with the landlord",
-      "flags": ["Bathroom count looks unusually high for the bedroom count, confirm before relying on it"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Bathroom count looks unusually high for the bedroom count, confirm before relying on it"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/365-bennington-gate-unit-13-waterloo-ontario-n2t-2l1_29996080_1.webp",
+        "https://www.keyhomes.ca/img/365-bennington-gate-unit-13-waterloo-ontario-n2t-2l1_29996080_2.webp",
+        "https://www.keyhomes.ca/img/365-bennington-gate-unit-13-waterloo-ontario-n2t-2l1_29996080_3.webp",
+        "https://www.keyhomes.ca/img/365-bennington-gate-unit-13-waterloo-ontario-n2t-2l1_29996080_4.webp"
+      ]
     },
     {
       "rank": 35,
@@ -909,8 +1109,16 @@
       "listed": "Active",
       "pros": "Real house, 2.5 baths, garage plus driveway parking",
       "cons": "Landlord withholds exact address until contacted, commute is on the longer side",
-      "flags": ["Confirm exact address before applying"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Confirm exact address before applying"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/3a/3a3a0b50-2aaa-46a4-9088-722a0f4ceebd?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/68/68a5c45f-a8f7-4911-9bbe-d32d154c8be4?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/e8/e871312a-d0d4-4981-9db9-711d6299d7ac?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/70/7013399e-a229-455e-b62a-b7a92baa7f9a?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 36,
@@ -936,7 +1144,13 @@
       "pros": "Real detached house, 2.5 baths, garage plus driveway",
       "cons": "$1,067 per bedroom is on the higher side for a 3-bedroom unit",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/96/962150c2-e429-49a4-99de-58e40ea653b3?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/27/27b95054-7ca1-4cef-a9d9-6afc0334fe7b?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/25/2593a398-3332-4a5f-9813-390628e5dead?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/5e/5eeb9467-3985-477b-b638-d7480eae0850?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 37,
@@ -962,7 +1176,13 @@
       "pros": "Real house, three driveway spaces, reasonable price",
       "cons": "Commute is on the longer side for this batch",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/172-springfield-place-waterloo-ontario-n2t-2m6_29990047_1.webp",
+        "https://www.keyhomes.ca/img/172-springfield-place-waterloo-ontario-n2t-2m6_29990047_2.webp",
+        "https://www.keyhomes.ca/img/172-springfield-place-waterloo-ontario-n2t-2m6_29990047_3.webp",
+        "https://www.keyhomes.ca/img/172-springfield-place-waterloo-ontario-n2t-2m6_29990047_4.webp"
+      ]
     },
     {
       "rank": 38,
@@ -988,7 +1208,13 @@
       "pros": "Affordable, carport plus driveway parking",
       "cons": "Upper unit of a semi-detached rather than a full house",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/242-cedarbrae-avenue-unit-b-waterloo-ontario-n2l-4s7_29990478_1.webp",
+        "https://www.keyhomes.ca/img/242-cedarbrae-avenue-unit-b-waterloo-ontario-n2l-4s7_29990478_2.webp",
+        "https://www.keyhomes.ca/img/242-cedarbrae-avenue-unit-b-waterloo-ontario-n2l-4s7_29990478_3.webp",
+        "https://www.keyhomes.ca/img/242-cedarbrae-avenue-unit-b-waterloo-ontario-n2l-4s7_29990478_4.webp"
+      ]
     },
     {
       "rank": 39,
@@ -1014,7 +1240,13 @@
       "pros": "Cheapest 3-bedroom option found at $750 per bedroom",
       "cons": "Only 1 bathroom for 3 people, weaker commute, only 1 parking space",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/224-a-portsmouth-gate-waterloo-ontario-n2t-2h9_29986844_1.webp",
+        "https://www.keyhomes.ca/img/224-a-portsmouth-gate-waterloo-ontario-n2t-2h9_29986844_2.webp",
+        "https://www.keyhomes.ca/img/224-a-portsmouth-gate-waterloo-ontario-n2t-2h9_29986844_3.webp",
+        "https://www.keyhomes.ca/img/224-a-portsmouth-gate-waterloo-ontario-n2t-2h9_29986844_4.webp"
+      ]
     },
     {
       "rank": 40,
@@ -1039,8 +1271,16 @@
       "listed": "3 days ago",
       "pros": "Three full bathrooms, double garage",
       "cons": "Most expensive 3-bedroom option at over $1,250 per bedroom, weakest commute in this batch, basement excluded from the lease",
-      "flags": ["Confirm exactly what is included in this upper-level-only rental before applying"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Confirm exactly what is included in this upper-level-only rental before applying"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/502-sundew-drive-waterloo-ontario-n0v-0b9_29986609_1.webp",
+        "https://www.keyhomes.ca/img/502-sundew-drive-waterloo-ontario-n0v-0b9_29986609_2.webp",
+        "https://www.keyhomes.ca/img/502-sundew-drive-waterloo-ontario-n0v-0b9_29986609_3.webp",
+        "https://www.keyhomes.ca/img/502-sundew-drive-waterloo-ontario-n0v-0b9_29986609_4.webp"
+      ]
     },
     {
       "rank": 41,
@@ -1066,7 +1306,13 @@
       "pros": "Listing explicitly notes suitable for student groups, primary bedroom ensuite, walk-up basement, four parking spaces",
       "cons": "Vista Hills is on the western edge of the city, transit runs well over 20 minutes",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/561-mayapple-street-waterloo-ontario-n2v-2e3_29936185_1.webp",
+        "https://www.keyhomes.ca/img/561-mayapple-street-waterloo-ontario-n2v-2e3_29936185_2.webp",
+        "https://www.keyhomes.ca/img/561-mayapple-street-waterloo-ontario-n2v-2e3_29936185_3.webp",
+        "https://www.keyhomes.ca/img/561-mayapple-street-waterloo-ontario-n2v-2e3_29936185_4.webp"
+      ]
     },
     {
       "rank": 42,
@@ -1091,8 +1337,16 @@
       "listed": "Active",
       "pros": "One of the tightest commutes on the entire site, all utilities included, furnished, pet-friendly, confirmed whole-house single lease for September 2026",
       "cons": "Rent not posted, landlord withholds exact address until contacted",
-      "flags": ["Confirm rent and exact address before applying"],
-      "askAboutShortTerm": true
+      "flags": [
+        "Confirm rent and exact address before applying"
+      ],
+      "askAboutShortTerm": true,
+      "photos": [
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/0e/0e5e3414-b983-4011-b31e-7d645569ed8a?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/a0/a0ba0994-8f4b-45e8-8738-f7035985eddb?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/fc/fc572dd7-8493-4543-bae5-99f826cac3e0?rule=kijijica-640-webp",
+        "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/12/126686e4-0a2f-489b-93bf-575816103341?rule=kijijica-640-webp"
+      ]
     },
     {
       "rank": 43,
@@ -1117,8 +1371,16 @@
       "listed": "Active",
       "pros": "Confirmed September 1 2026 start, walk-out finished basement, deck with jacuzzi, newer roof and furnace",
       "cons": "Landlord asks for employment verification and good credit and prefers family tenants, which may mean extra screening for a student group",
-      "flags": ["Landlord may screen student groups more closely, ask early"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Landlord may screen student groups more closely, ask early"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/470-trembling-aspen-avenue-waterloo-ontario-n2t-2t4_29981674_1.webp",
+        "https://www.keyhomes.ca/img/470-trembling-aspen-avenue-waterloo-ontario-n2t-2t4_29981674_2.webp",
+        "https://www.keyhomes.ca/img/470-trembling-aspen-avenue-waterloo-ontario-n2t-2t4_29981674_3.webp",
+        "https://www.keyhomes.ca/img/470-trembling-aspen-avenue-waterloo-ontario-n2t-2t4_29981674_4.webp"
+      ]
     },
     {
       "rank": 44,
@@ -1144,7 +1406,13 @@
       "pros": "One of the tightest commutes in this batch, all utilities included, $700 per bedroom",
       "cons": "Only 1 bathroom for 4 people, coin laundry rather than in-unit, no basement access",
       "flags": [],
-      "askAboutShortTerm": false
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/379-holly-street-unit-2-waterloo-ontario-n2l-4g5_29932613_1.webp",
+        "https://www.keyhomes.ca/img/379-holly-street-unit-2-waterloo-ontario-n2l-4g5_29932613_2.webp",
+        "https://www.keyhomes.ca/img/379-holly-street-unit-2-waterloo-ontario-n2l-4g5_29932613_3.webp",
+        "https://www.keyhomes.ca/img/379-holly-street-unit-2-waterloo-ontario-n2l-4g5_29932613_4.webp"
+      ]
     },
     {
       "rank": 45,
@@ -1169,8 +1437,16 @@
       "listed": "5 days ago",
       "pros": "Steps from UW, in-suite laundry, renovated bathrooms, furnished",
       "cons": "Apartment rather than a house, condo maintenance fee adds meaningfully to the real monthly cost, confirm total cost before applying",
-      "flags": ["Condo maintenance fee is on top of rent, confirm the true all-in monthly cost"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Condo maintenance fee is on top of rent, confirm the true all-in monthly cost"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/91-westmount-road-unit-3-waterloo-ontario-n2l-5g5_29975852_1.webp",
+        "https://www.keyhomes.ca/img/91-westmount-road-unit-3-waterloo-ontario-n2l-5g5_29975852_2.webp",
+        "https://www.keyhomes.ca/img/91-westmount-road-unit-3-waterloo-ontario-n2l-5g5_29975852_3.webp",
+        "https://www.keyhomes.ca/img/91-westmount-road-unit-3-waterloo-ontario-n2l-5g5_29975852_4.webp"
+      ]
     },
     {
       "rank": 46,
@@ -1195,8 +1471,16 @@
       "listed": "37 days ago",
       "pros": "Cheapest 4-bedroom option found at $500 per bedroom, dual-sink bathroom, large kitchen island",
       "cons": "Only 1 bathroom for 4 people, main-floor-only unit rather than the whole house, listed 37 days ago so confirm it is still available",
-      "flags": ["Listed over a month ago, confirm still available"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Listed over a month ago, confirm still available"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/536-glen-forrest-boulevard-waterloo-ontario-n2l-4j2_29103934_1.webp",
+        "https://www.keyhomes.ca/img/536-glen-forrest-boulevard-waterloo-ontario-n2l-4j2_29103934_2.webp",
+        "https://www.keyhomes.ca/img/536-glen-forrest-boulevard-waterloo-ontario-n2l-4j2_29103934_3.webp",
+        "https://www.keyhomes.ca/img/536-glen-forrest-boulevard-waterloo-ontario-n2l-4j2_29103934_4.webp"
+      ]
     },
     {
       "rank": 47,
@@ -1221,8 +1505,16 @@
       "listed": "1 day ago",
       "pros": "Walking distance to both UW and WLU, finished walkout basement with patio, furnished",
       "cons": "A reported $1,200 per month maintenance fee would nearly double the real monthly cost if accurate; this must be confirmed directly with the listing agent before considering",
-      "flags": ["Maintenance fee looks unusually high, confirm the true all-in cost before applying, treat as unverified until clarified"],
-      "askAboutShortTerm": false
+      "flags": [
+        "Maintenance fee looks unusually high, confirm the true all-in cost before applying, treat as unverified until clarified"
+      ],
+      "askAboutShortTerm": false,
+      "photos": [
+        "https://www.keyhomes.ca/img/62-balsam-street-unit-t113-waterloo-ontario-n2l-3h2_29990822_1.webp",
+        "https://www.keyhomes.ca/img/62-balsam-street-unit-t113-waterloo-ontario-n2l-3h2_29990822_2.webp",
+        "https://www.keyhomes.ca/img/62-balsam-street-unit-t113-waterloo-ontario-n2l-3h2_29990822_3.webp",
+        "https://www.keyhomes.ca/img/62-balsam-street-unit-t113-waterloo-ontario-n2l-3h2_29990822_4.webp"
+      ]
     }
   ],
   "actFast": [
@@ -1235,24 +1527,81 @@
   ],
   "scenarioANote": "After a deep second pass across Kijiji's sublet categories, Reddit, Facebook-indexed search, and every purpose-built student housing company on the list, genuine whole-group 4-month leases (September to December 2026) are essentially not on the market yet. The only verified 4-month whole-unit sublet found is a 2-bedroom apartment near ION Allen station, too small for a 5-6 person group. This matches how the Waterloo co-op sublet market actually works: departing co-op students almost always sublet their own single room individually rather than a group vacating a whole house at once, and most fall-term sublet posts do not appear until August as people confirm their own work terms. Rather than force a match, this pass instead flagged the strongest Scenario B listings worth a direct call to ask if the landlord will shorten the term to 4 months (see the badges below); private landlords with several properties, such as UWrent and the Laurelwood and Churchill Crescent listers, are the best odds. One 3-bedroom find, 602-246 Lester Street, already advertises a flexible September to May academic-year term, which is the closest thing to Scenario A found in this pass and worth asking if it can shorten further. The daily refresh will keep watching for genuine Scenario A postings as August approaches.",
   "sourceCoverage": [
-    {"source": "KeyHomes (MLS aggregator)", "result": "Strongest source across all passes: the majority of verified listings across every bedroom count, from Central Waterloo to Vista Hills, Beechwood, and Uptown"},
-    {"source": "REALTOR.ca", "result": "New this pass: usable for cross-verifying KeyHomes-syndicated MLS listings and surfacing a few additional 3 and 4 bedroom detail pages; bedroom-filtered feeds for some neighbourhoods (Eastbridge) returned zero results"},
-    {"source": "Kijiji (student housing, main rentals, house-for-rent, and sublet categories)", "result": "Returned results both passes: several whole-house listings (Laurelwood, Columbia Hills, Churchill Crescent, Greenbrier Dr, Elgin Crescent) plus per-room listings and the one verified 2-bedroom Scenario A sublet"},
-    {"source": "Zumper (houses and apartments)", "result": "Returned results: two 4-bedroom houses, no new inventory on repeat check with broader filters"},
-    {"source": "UWrent (local landlord)", "result": "Returned results: a 5-house cluster on University Ave W and Albert St, all whole-house and furnished, none with published pricing"},
-    {"source": "RentWoch (local property manager)", "result": "Returned results: full catalog checked, mostly per-room student leases near WLU, one listing (106 Albert St) is stale with no vacancy"},
-    {"source": "Liv.rent", "result": "Returned results: 5-bed student suites on Lester St; pagination and bedroom filters did not surface further inventory"},
-    {"source": "PadMapper", "result": "Accessible both passes, zero 4+ bedroom whole-house results; several indexed detail pages found via search were stale or delisted"},
-    {"source": "Craigslist Kitchener-Waterloo (housing and sublet categories)", "result": "Accessible, zero 4+ bedroom results in any category checked"},
-    {"source": "Reddit (r/uwaterloo, r/kitchener)", "result": "WebFetch is blocked on reddit.com entirely, and search engines do not index post bodies. A group member would need to browse directly"},
-    {"source": "Facebook Marketplace and housing groups", "result": "Requires login, cannot be automated. Group members should watch 'Student Housing in Waterloo,' 'UW Off Campus Housing,' and Marketplace manually"},
-    {"source": "UW off-campus housing site", "result": "Guidance only, points to Places4Students (blocked) and general search"},
-    {"source": "Places4Students (UW and Laurier)", "result": "Blocks automated access (403) on every attempt"},
-    {"source": "Rentals.ca, Point2Homes, Apartments.com, RentBoard, RentSeeker, Zolo, SquareYards, Mitula, Realtor.ca, Rentfaster, Rew.ca, Condos.ca", "result": "Block automated access (403/401) on every attempt across both passes"},
-    {"source": "Zoocasa, HonestDoor", "result": "Loaded but returned no usable Waterloo whole-house rental listings"},
-    {"source": "Engel & Volkers (local brokerage)", "result": "Listings loaded but omit address and price, not verifiable enough to include"},
-    {"source": "HRS Property, Schembri Property Management (local managers)", "result": "Checked, mostly per-room leases clustered near Laurier rather than UW, none added"},
-    {"source": "Bamboo Housing / The MARQ / purpose-built towers", "result": "Individual-lease-only buildings, excluded from primary results by request"},
-    {"source": "KW4Rent", "result": "Site is JavaScript-only, no data retrievable either pass"}
+    {
+      "source": "KeyHomes (MLS aggregator)",
+      "result": "Strongest source across all passes: the majority of verified listings across every bedroom count, from Central Waterloo to Vista Hills, Beechwood, and Uptown"
+    },
+    {
+      "source": "REALTOR.ca",
+      "result": "New this pass: usable for cross-verifying KeyHomes-syndicated MLS listings and surfacing a few additional 3 and 4 bedroom detail pages; bedroom-filtered feeds for some neighbourhoods (Eastbridge) returned zero results"
+    },
+    {
+      "source": "Kijiji (student housing, main rentals, house-for-rent, and sublet categories)",
+      "result": "Returned results both passes: several whole-house listings (Laurelwood, Columbia Hills, Churchill Crescent, Greenbrier Dr, Elgin Crescent) plus per-room listings and the one verified 2-bedroom Scenario A sublet"
+    },
+    {
+      "source": "Zumper (houses and apartments)",
+      "result": "Returned results: two 4-bedroom houses, no new inventory on repeat check with broader filters"
+    },
+    {
+      "source": "UWrent (local landlord)",
+      "result": "Returned results: a 5-house cluster on University Ave W and Albert St, all whole-house and furnished, none with published pricing"
+    },
+    {
+      "source": "RentWoch (local property manager)",
+      "result": "Returned results: full catalog checked, mostly per-room student leases near WLU, one listing (106 Albert St) is stale with no vacancy"
+    },
+    {
+      "source": "Liv.rent",
+      "result": "Returned results: 5-bed student suites on Lester St; pagination and bedroom filters did not surface further inventory"
+    },
+    {
+      "source": "PadMapper",
+      "result": "Accessible both passes, zero 4+ bedroom whole-house results; several indexed detail pages found via search were stale or delisted"
+    },
+    {
+      "source": "Craigslist Kitchener-Waterloo (housing and sublet categories)",
+      "result": "Accessible, zero 4+ bedroom results in any category checked"
+    },
+    {
+      "source": "Reddit (r/uwaterloo, r/kitchener)",
+      "result": "WebFetch is blocked on reddit.com entirely, and search engines do not index post bodies. A group member would need to browse directly"
+    },
+    {
+      "source": "Facebook Marketplace and housing groups",
+      "result": "Requires login, cannot be automated. Group members should watch 'Student Housing in Waterloo,' 'UW Off Campus Housing,' and Marketplace manually"
+    },
+    {
+      "source": "UW off-campus housing site",
+      "result": "Guidance only, points to Places4Students (blocked) and general search"
+    },
+    {
+      "source": "Places4Students (UW and Laurier)",
+      "result": "Blocks automated access (403) on every attempt"
+    },
+    {
+      "source": "Rentals.ca, Point2Homes, Apartments.com, RentBoard, RentSeeker, Zolo, SquareYards, Mitula, Realtor.ca, Rentfaster, Rew.ca, Condos.ca",
+      "result": "Block automated access (403/401) on every attempt across both passes"
+    },
+    {
+      "source": "Zoocasa, HonestDoor",
+      "result": "Loaded but returned no usable Waterloo whole-house rental listings"
+    },
+    {
+      "source": "Engel & Volkers (local brokerage)",
+      "result": "Listings loaded but omit address and price, not verifiable enough to include"
+    },
+    {
+      "source": "HRS Property, Schembri Property Management (local managers)",
+      "result": "Checked, mostly per-room leases clustered near Laurier rather than UW, none added"
+    },
+    {
+      "source": "Bamboo Housing / The MARQ / purpose-built towers",
+      "result": "Individual-lease-only buildings, excluded from primary results by request"
+    },
+    {
+      "source": "KW4Rent",
+      "result": "Site is JavaScript-only, no data retrievable either pass"
+    }
   ]
 }
