@@ -6,19 +6,24 @@ function totalOf(l) {
   return null;
 }
 
-function card(l, occ) {
+function card(l, occExtra) {
   const total = totalOf(l);
   const estTag = (!l.totalRent && total) ? " (est. from per-room rate)" : "";
-  const pp = total && occ ? Math.round(total / occ) : null;
+  // Per-person price always auto-derives from this listing's own bedroom count, never a
+  // manually picked global number. occExtra (0 or 1) models "double up one room" and applies
+  // on top of the listing's real beds, so it stays correct no matter which bedroom filter is active.
+  const occ = l.beds + (occExtra || 0);
+  const pp = total ? Math.round(total / occ) : null;
   const leaseBadge = l.wholeLease
     ? '<span class="badge b-whole">One lease, whole property</span>'
     : '<span class="badge b-room">Per-room leases</span>';
   const askBadge = l.askAboutShortTerm
     ? '<span class="badge b-ask">Worth asking about 4-month term</span>'
     : '';
+  const occNote = occExtra ? ' (' + l.beds + ' bed + 1 doubled up)' : '';
   const priceHtml = total
     ? '<span class="big">' + money(total) + '/mo' + estTag + '</span>' +
-      (pp ? '<span class="pp"><b>' + money(pp) + '</b> per person at ' + occ + '</span>' : '')
+      (pp ? '<span class="pp"><b>' + money(pp) + '</b> per person of ' + occ + occNote + '</span>' : '')
     : '<span class="big">Contact for price</span>';
   const flags = (l.flags || []).map(f => '<div class="flag">Flag: ' + f + '</div>').join("");
   let photosHtml = "";

@@ -13,7 +13,7 @@
   <div class="boot-inner">
     <div>WATERLOO HOUSE HUNT OS v2.049</div>
     <div class="dim">(c) 2026 The Group. All rents reserved.</div>
-    <div class="dim">memory check ........ 47 listings OK</div>
+    <div class="dim">memory check ........ 64 listings OK</div>
     <div class="dim">commute module ...... UW MAIN CAMPUS locked</div>
     <div class="dim">scam filter ......... ARMED</div>
     <div>&nbsp;</div>
@@ -37,7 +37,7 @@
       <div class="titlebar"><span class="closebox"></span><span class="tb-label">ABOUT_THIS_SEARCH.TXT</span></div>
       <div class="header-inner">
         <h1>Waterloo House Hunt</h1>
-        <div class="sub">Group rental search for UW co-op students, covering 3, 4, 5, and 6 bedroom options for groups of different sizes. Scenario A: 4-month lease Sept to Dec 2026. Scenario B: 12-month lease Sept 2026 to Aug 2027. Budget scales with bedroom count; the 5-6 bed search targeted $3,500 to $6,500 total, ideal $4,000 to $5,000. Commute limit 20 minutes to UW main campus. Use the bedroom filter below to narrow the list.</div>
+        <div class="sub">Group rental search for UW co-op students, covering 2, 3, 4, 5, and 6 bedroom options for groups of different sizes. Scenario A: 4-month lease Sept to Dec 2026. Scenario B: 12-month lease Sept 2026 to Aug 2027. Budget scales with bedroom count; the 5-6 bed search targeted $3,500 to $6,500 total, ideal $4,000 to $5,000. Commute limit 20 minutes to UW main campus. Use the bedroom filter below to narrow the list; per-person price always auto-matches each listing's own bedroom count.</div>
         <div class="updated" id="updated"></div>
         <div class="nav"><a href="history.html">OPEN WEEKLY ARCHIVE &gt;&gt;</a></div>
       </div>
@@ -46,20 +46,22 @@
     <div id="error">Could not load listings.json. If you opened this file directly from disk, use the hosted site URL instead.</div>
 
     <div class="controls">
-      <span>SPLIT RENT:</span>
-      <button id="occ5" class="active" onclick="setOcc(5)">5 people</button>
-      <button id="occ6" onclick="setOcc(6)">6 people</button>
-    </div>
-
-    <div class="controls">
       <span>BEDROOMS:</span>
       <button id="bedAll" class="active" onclick="setBedFilter(null)">All</button>
+      <button id="bed2" onclick="setBedFilter(2)">2 bed</button>
       <button id="bed3" onclick="setBedFilter(3)">3 bed</button>
       <button id="bed4" onclick="setBedFilter(4)">4 bed</button>
       <button id="bed5" onclick="setBedFilter(5)">5 bed</button>
       <button id="bed6" onclick="setBedFilter(6)">6 bed</button>
       <span id="count"></span>
     </div>
+
+    <div class="controls">
+      <span>PRICE PER PERSON:</span>
+      <button id="occExtraOff" class="active" onclick="setOccExtra(0)">1 person per room</button>
+      <button id="occExtraOn" onclick="setOccExtra(1)">+1, double up a room</button>
+    </div>
+    <p class="section-note">Per-person price always divides by each listing's own bedroom count automatically, no manual toggling. The button above just lets you compare "everyone gets their own room" against "one room shared" across every listing at once.</p>
 
     <div class="banner" id="actfast">
       <h2>Act fast</h2>
@@ -69,7 +71,7 @@
     <div class="note" id="scenario-a"></div>
 
     <h2 class="section">Worth a Call About a 4-Month Term</h2>
-    <p class="section-note">These are not confirmed Scenario A listings. Genuine whole-group 4-month leases are essentially not on the market yet (see the note above). These are the strongest Scenario B options where a private or small landlord might realistically agree to shorten the lease to September through December 2026 if asked directly.</p>
+    <p class="section-note">These are not per-room Scenario A sublets, they are 12-month whole-property listings where a private or small landlord might realistically agree to shorten the lease if asked directly. For confirmed 4-month Scenario A sublets (mostly per-room, filter by Scenario A tag on cards below), see the note above and browse the Top Picks, which now include several genuine September-start options.</p>
     <div id="askabout"></div>
 
     <h2 class="section">Top Picks</h2>
@@ -97,15 +99,15 @@
 <script src="site.js"></script>
 <script>
 let DATA = null;
-let occ = 5;
+let occExtra = 0;
 let bedFilter = null;
 
 function render() {
   if (!DATA) return;
   document.getElementById("updated").textContent = "LAST UPDATED: " + DATA.lastUpdated;
-  document.getElementById("occ5").className = occ === 5 ? "active" : "";
-  document.getElementById("occ6").className = occ === 6 ? "active" : "";
-  for (const b of [null, 3, 4, 5, 6]) {
+  document.getElementById("occExtraOff").className = occExtra === 0 ? "active" : "";
+  document.getElementById("occExtraOn").className = occExtra === 1 ? "active" : "";
+  for (const b of [null, 2, 3, 4, 5, 6]) {
     document.getElementById(b === null ? "bedAll" : "bed" + b).className = bedFilter === b ? "active" : "";
   }
   const visible = bedFilter === null ? DATA.listings : DATA.listings.filter(l => l.beds === bedFilter);
@@ -114,12 +116,12 @@ function render() {
   for (const t of ["top", "honourable", "fallback"]) {
     tiers[t].sort((a, b) => a.rank - b.rank);
     document.getElementById(t).innerHTML = tiers[t].length
-      ? cardList(tiers[t], occ)
+      ? cardList(tiers[t], occExtra)
       : '<p class="section-note">Nothing in this tier for the current bedroom filter.</p>';
   }
   const askAbout = visible.filter(l => l.askAboutShortTerm).sort((a, b) => a.rank - b.rank);
   document.getElementById("askabout").innerHTML = askAbout.length
-    ? cardList(askAbout, occ)
+    ? cardList(askAbout, occExtra)
     : '<p class="section-note">None flagged for the current bedroom filter.</p>';
   document.getElementById("count").textContent = visible.length + " of " + DATA.listings.length + " listings";
   document.getElementById("actfast-list").innerHTML = DATA.actFast.map(a => "<li>" + a + "</li>").join("");
@@ -128,7 +130,7 @@ function render() {
     DATA.sourceCoverage.map(s => "<tr><td>" + s.source + "</td><td>" + s.result + "</td></tr>").join("");
 }
 
-function setOcc(n) { occ = n; render(); }
+function setOccExtra(n) { occExtra = n; render(); }
 function setBedFilter(n) { bedFilter = n; render(); }
 
 // Boot screen: shows once per browser session, one click to enter.

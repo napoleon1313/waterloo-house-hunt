@@ -62,7 +62,7 @@ function renderWeekBlock(w, topListings) {
     '<div class="week-inner">' +
     '<div class="week-head"><h2>' + w.weekLabel + '<span class="frozen-tag">Archived, never edited</span></h2>' +
     '<span class="week-meta">' + w.dateRange + ' &middot; archived ' + w.archivedAt + ' &middot; ' + w.listingCount + ' listings total</span></div>' +
-    '<div class="top-cards">' + cardList(topListings, 5) + '</div>' +
+    '<div class="top-cards">' + cardList(topListings, 0) + '</div>' +
     '<button class="expand-btn" type="button">Show all ' + w.listingCount + ' listings from this week</button>' +
     '<div class="week-extra"></div>' +
     '</div>' +
@@ -95,7 +95,7 @@ async function render() {
         const rest = weekDataCache[file].listings
           .filter(l => l.tier !== "top")
           .sort((a, b) => a.rank - b.rank);
-        extra.innerHTML = cardList(rest, 5);
+        extra.innerHTML = cardList(rest, 0);
         extra.classList.add("open");
         btn.textContent = "Hide the rest of this week";
       }
